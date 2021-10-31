@@ -4,8 +4,7 @@ import { sandboxApi } from "./AxiosService.js";
 
 class TodoService {
   async getTodo() {
-    const res = await sandboxApi('/fitz/todos')
-    console.log(res.data)
+    const res = await sandboxApi.get('/fitz/todos')
     const todo = res.data.map(t => new Todo(t))
     ProxyState.todos = todo
   }
