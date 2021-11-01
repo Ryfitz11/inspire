@@ -11,8 +11,6 @@ class App {
   todoController = new TodoController();
   imageController = new ImageController()
   weatherController = new WeatherController()
-
-
   quoteController = new QuotesController()
   clockController = new ClockController()
 }

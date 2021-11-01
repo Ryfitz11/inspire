@@ -10,3 +10,6 @@
 footer{
   min-height: 3em;
 }
+body{
+  background-size: cover;
+}
