@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row d-flex justify-content-end">
         <div class="col-2">
-          <h1>Weather</h1>
+          <h1 id="temp">Weather</h1>
         </div>
       </div>
     </div>
@@ -35,10 +35,10 @@
         <h3>Day Month Year</h3> -->
 
       </div>
-      <div class="col-md-4">
-        <div class="card m-2 shadow">
-          <div class="card-body">
-            <h3 class="card-title">Todo List <span id="completed"></span></h3>
+      <div class="col-md-4 opacity-75 align-bottom">
+        <div class="card m-2 shadow ">
+          <div class="card-body ">
+            <h3 class="card-title ">Todo List <span class="opacity-25" id="completed"></span></h3>
             <div class="card-text" id="todo">
             </div>
             <form onsubmit="app.todoController.addTodo()">
@@ -58,8 +58,8 @@
       <div class="col-6">
         <h6>Image</h6>
       </div>
-      <div class="col-6 text-center" id="quote">
-        <h6><i></h6></i>
+      <div class="col-6 " id="quote">
+        <h6><i></i></h6>
       </div>
     </div>
 

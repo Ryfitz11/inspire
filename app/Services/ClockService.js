@@ -1,14 +1,21 @@
-import { sandboxApi } from "./AxiosService.js";
 class ClockService {
+
   async getClock() {
+    console.log("10 second interval")
+
     let template = ""
     const now = new Date()
     let Hr = now.getHours()
     let Min = now.getMinutes()
     let num = now.getDate()
     let year = now.getFullYear()
-
     let day = ""
+
+    function min(Min) {
+      return Min > 10 ? Min : "0" + Min;
+    }
+    min()
+
     switch (now.getDay()) {
       case 0:
         day = "Sunday";
@@ -73,13 +80,12 @@ class ClockService {
         break;
 
     }
-
-
     template = `
-    <h1>${Hr}:${Min}</h1>
-    <h6>Happy ${day}!</h6>
-    <h3>${num} ${month} ${year}</h3>`
+              <h1>${Hr}:${Min}</h1>
+              <h6>Happy ${day}!</h6>
+              <h3>${num} ${month} ${year}</h3>`
     document.getElementById('clock').innerHTML = template
   }
 }
+
 export const clockService = new ClockService()

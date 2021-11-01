@@ -1,6 +1,12 @@
 /* BASIC STYLES HERE */
-body {
-  background-color: khaki;
-  background-image:url("")
-  ;
+.hide {
+  display: none;
+}
+    
+.quote:hover + .hide {
+  display: block;
+
+}
+footer{
+  min-height: 3em;
 }
